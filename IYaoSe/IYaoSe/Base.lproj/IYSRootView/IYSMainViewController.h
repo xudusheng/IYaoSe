@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  IYSMainViewController.h
 //  IYaoSe
 //
 //  Created by wangrongchao on 15/11/30.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface IYSMainViewController : UIViewController
 
 @end
-

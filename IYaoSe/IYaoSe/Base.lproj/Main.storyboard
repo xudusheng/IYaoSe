@@ -1,25 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zNj-Uw-b4I">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="jvq-Ua-YWv">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="ae5-wx-Drv" customClass="IYSMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="liG-zT-reU"/>
+                        <viewControllerLayoutGuide type="bottom" id="PKl-gA-qQM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="3zN-VZ-a2P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQM-FX-ID6">
+                                <rect key="frame" x="0.0" y="254" width="107" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="XW7-8X-V6E"/>
+                                </constraints>
+                                <state key="normal" title="妖色"/>
+                                <connections>
+                                    <action selector="imageRequestButtonClick:" destination="ae5-wx-Drv" eventType="touchUpInside" id="4wD-tS-fyO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6n-vu-YCS">
+                                <rect key="frame" x="107" y="254" width="106" height="60"/>
+                                <state key="normal" title="妹子图"/>
+                                <connections>
+                                    <action selector="imageRequestButtonClick:" destination="ae5-wx-Drv" eventType="touchUpInside" id="p6M-lZ-nIR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZc-rm-wgt">
+                                <rect key="frame" x="213" y="254" width="107" height="60"/>
+                                <state key="normal" title="花瓣美女"/>
+                                <connections>
+                                    <action selector="imageRequestButtonClick:" destination="ae5-wx-Drv" eventType="touchUpInside" id="0MI-bj-tHP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KZc-rm-wgt" firstAttribute="height" secondItem="KQM-FX-ID6" secondAttribute="height" id="AFl-An-1LX"/>
+                            <constraint firstItem="KZc-rm-wgt" firstAttribute="centerY" secondItem="3zN-VZ-a2P" secondAttribute="centerY" id="JJO-qS-Ce7"/>
+                            <constraint firstItem="KQM-FX-ID6" firstAttribute="leading" secondItem="3zN-VZ-a2P" secondAttribute="leading" id="NJa-AL-1Cr"/>
+                            <constraint firstItem="KQM-FX-ID6" firstAttribute="centerY" secondItem="3zN-VZ-a2P" secondAttribute="centerY" id="PMI-ht-io2"/>
+                            <constraint firstItem="A6n-vu-YCS" firstAttribute="width" secondItem="KQM-FX-ID6" secondAttribute="width" id="SkK-eU-2Uj"/>
+                            <constraint firstItem="KZc-rm-wgt" firstAttribute="width" secondItem="KQM-FX-ID6" secondAttribute="width" id="U7U-Ny-AI4"/>
+                            <constraint firstItem="KZc-rm-wgt" firstAttribute="leading" secondItem="A6n-vu-YCS" secondAttribute="trailing" id="Wtq-TI-462"/>
+                            <constraint firstItem="A6n-vu-YCS" firstAttribute="height" secondItem="KQM-FX-ID6" secondAttribute="height" id="Wv6-Ah-88v"/>
+                            <constraint firstItem="A6n-vu-YCS" firstAttribute="leading" secondItem="KQM-FX-ID6" secondAttribute="trailing" id="Xmn-BL-6Gz"/>
+                            <constraint firstItem="A6n-vu-YCS" firstAttribute="centerY" secondItem="3zN-VZ-a2P" secondAttribute="centerY" id="YN1-9v-jiX"/>
+                            <constraint firstAttribute="trailing" secondItem="KZc-rm-wgt" secondAttribute="trailing" id="ls5-Tt-46H"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="J42-ey-Y58"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e56-U4-1Js" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-144" y="-195"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R6a-lg-uvs">
+            <objects>
+                <navigationController id="zNj-Uw-b4I" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B1E-8L-hcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ae5-wx-Drv" kind="relationship" relationship="rootViewController" id="m7U-U8-8JN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbi-ah-PMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="-195"/>
         </scene>
     </scenes>
 </document>
